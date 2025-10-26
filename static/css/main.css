@@ -1,11 +1,20 @@
 /* aminaciones de elementos nav*/
-@import url("dropdown.css");
 
-*{ list-style: none;}
+*{ 
+  list-style: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  scroll-margin-top: 3.5rem;
+}
 
-.nav-link{ position: relative;}
+.sentry{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.nav-link::after{
+.nav-link-hov{ position: relative;}
+
+.nav-link-hov::after{
   content: "";
   opacity: 0;
   transition: all 0.3s;
@@ -17,9 +26,85 @@
   left: 0;
 }
 
-.nav-link:hover::after{ opacity: 1; }
+.nav-link-hov:hover::after{ opacity: 1; }
 
-/* Elemento more (mas elementos nav) */
+/* Animaciones del dropdown nav */
+.slideIn { animation-name: slideIn;}
 
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
 
+/* Inicio */
 
+main{
+  padding-top: 3.5rem;
+  min-height: 300vh;
+}
+
+.inicio{
+  width: 100%;
+  height: 600px;
+  background-color: blue;
+  display: flex;
+}
+
+.my, .ps2{
+  width: 50%;
+  height: 100%;
+}
+
+.my{ background-color: #000000; }
+.ps2{ background-color: #000000;}
+
+/* Sobre mi */
+
+.sobre{
+  width: 100%;
+  height: 400px;
+}
+
+/* Certificado */
+
+.certificaciones{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.ciclo{
+  width: max-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  animation: scroll 18s linear infinite;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0%); }
+  to { transform: translateX(-50.4%); }
+}
+
+.certificado{
+  width: 600px;
+  height: 300px;
+  border-radius: 20px;
+  flex-shrink: 0;
+  img, h2{ width: 200px; font-size: 24px; }
+  gap: 2rem;
+}
+
+.cell01{ background-color: red; }
+.cell02{ background-color: chocolate; }
+.cell03{ background-color: yellowgreen; }
+.cell04{ background-color: blueviolet; }
