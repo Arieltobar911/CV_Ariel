@@ -8,11 +8,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="stylesheet" href="./static/css/main.css">
   <link rel="stylesheet" href="./static/css/mobile_optimizations.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
   <!-- NAV / Navegacion -->
-  <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#home">Ariel Tobar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,23 +25,20 @@
 
           <li class="nav-item"><a class="nav-link nav-link-hov" href="#inicio">Inicio</a></li>
           <li class="nav-item"><a class="nav-link nav-link-hov" href="#sobre">Sobre mi</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-hov" href="#servicios">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-hov" href="#clientes">Clientes</a></li>
           <li class="nav-item"><a class="nav-link nav-link-hov" href="#habilidades">Habilidades</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-hov" href="#educacion">Educación</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-hov" href="#certificaciones">Certificaciones</a></li>
           <!-- El Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link nav-link-hov" href="#" id="moreDropdown" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               Mas
             </a>
-            <ul class="bg-dark dropdown-menu dropdown-menu-end animate slideIn" aria-labelledby="moreDropdown">
-              <li><a class="nav-link" href="#educacion">Educación</a></li>
-              <li><a class="nav-link" href="#certificaciones">Certificaciones</a></li>
-              <li><a class="nav-link" href="#experiencias">Experiencia</a></li>
-              <li><a class="nav-link" href="#referencias">Referencias</a></li>
-              <li><a class="nav-link" href="#portafolio">Portafolio</a></li>
-              <li><a class="nav-link" href="#organizaciones">Organizaciones</a></li>
-              <li><a class="nav-link" href="#contacto">Contacto</a></li>
+            <ul class="bg-dark dropdown-menu dropdown-menu-end animar slideDentro" aria-labelledby="moreDropdown">
+              <li><a class="dropdown-item text-white" href="#experiencias">Experiencia</a></li>
+              <li><a class="dropdown-item text-white" href="#referencias">Referencias</a></li>
+              <li><a class="dropdown-item text-white" href="#portafolio">Portafolio</a></li>
+              <li><a class="dropdown-item text-white" href="#contacto">Contacto</a></li>
             </ul>
           </li>
 
@@ -53,96 +51,286 @@
   <!-- MAIN / Principal -->
   <main>
     <!-- Inicio -->
-    <section class="inicio" id="inicio">
-      <section class="my">
+    <section class="centro inicio" id="inicio">
 
+      <section class="yo centro">
+        <section class="centro ariel revelaciones izquierdas">
+          <div class="marco centro">
+            <img src="./static/img/ariel_face.webp" alt="Ariel Profesional Face">
+            <h2>Hola, me llamo Ariel y les presento mi CV.</h2>
+          </div>
+        </section>
       </section>
-      <section class="ps2 sentry">
-        <video autoplay muted loop width="100%" height="100%">
-          <source src="./static/video/PS2XMB.mp4" type="video/mp4">
-          tu navegadore no puede soportar el video.
-        </video>
+      
+      <section class="ps2 centro">
+        <video autoplay muted loop width="100%" height="100%"><source src="./static/video/PS2XMB.mp4" type="video/mp4">tu navegador no puede soportar el video.</video>
       </section>
 
     </section>
     <!-- About / sobre mi -->
-    <section class="sobre" id="sobre">
-      
-    </section>
-    <!-- Servicios -->
-    <section class="servicios" id="servicios">
-      <section class="informacion">
-
-      </section>
-    </section>
-    <!-- Clientes -->
-    <section class="clientes" id="clientes">
-
+    <section class="sobre centro" id="sobre">
+      <div class="centro caja" onmouseover="dynamico(this)">
+        <h1>Sobre mi</h1>
+        <p>Soy estudiante de enseñanza media (preparatoria) y aspiro a convertirme en ingeniero civil en Computación e Informática. Me interesa estudiar códigos de sitios web y sistemas, como el kernel de Linux, y, de igual manera, me gustaría aprender constantemente nuevas tecnologías y conceptos.</p>
+      </div>
     </section>
     <!-- Habilidades -->
-    <section class="habilidades" id="habilidades">
+     <h2 class="centro titular" id="habilidades">Mis habilidades</h2>
+    <section class="habilidades">
+        <section class="ciclo reverso habi">
 
-    </section>
-    <!-- Educacion-->
-    <section>
+          <article class="certificado centro celda_01" onmouseover="elegido(this)" onmouseout="rechazo(this)">
+            <img src="./static/img/logos/bootstrap.png" alt="bootstrap logo" class="imagen_logos" >
+            <h2>Bootstrap 5: para diseños responsivos, rapidos y eficientes.</h2>
+          </article>
+          <article class="certificado centro celda_02" onmouseover="elegido(this)" onmouseout="rechazo(this)">
+            <img src="./static/img/logos/css3.png" alt="CSS logo" class="imagen_logos css" >
+            <h2>CSS 3: Estilos propios y personalizados.</h2>
+          </article>
+          <article class="certificado centro celda_03" onmouseover="elegido(this)" onmouseout="rechazo(this)">
+            <img src="./static/img/logos/git.png" alt="git logo" class="imagen_logos" >
+              <h2>Git: Control de versiones de mis proyectos.</h2>
+          </article>
+          <article class="certificado centro celda_04" onmouseover="elegido(this)" onmouseout="rechazo(this)">
+            <img src="./static/img/logos/html5.png" alt="HTML logo" class="imagen_logos" >
+            <h2>HTML 5: El esqueleto de la gran mayoria de sitios web.</h2>
+          </article>
+          <article class="certificado centro celda_01" onmouseover="elegido(this)" onmouseout="rechazo(this)">
+            <img src="./static/img/logos/javascript.png" alt="javascript logo" class="imagen_logos" >
+            <h2>JavaScript: Manipulacion del DOM y logica.</h2>
+          </article>
+          <article class="certificado centro celda_02" onmouseover="elegido(this)" onmouseout="rechazo(this)">
+            <img src="./static/img/logos/mongodb.png" alt="MongoDB logo" class="imagen_logos mango" >
+            <h2>MongoDB: Base de datos en base archivos JSON.</h2>
+          </article>
+          <article class="certificado centro celda_03" onmouseover="elegido(this)" onmouseout="rechazo(this)">
+            <img src="./static/img/logos/mysql.png" alt="mysql logo" class="imagen_logos" >
+              <h2>MySQL / MariaDB: Bases de datos SQL de mediana escala</h2>
+          </article>
+          <article class="certificado centro celda_04" onmouseover="elegido(this)" onmouseout="rechazo(this)">
+            <img src="./static/img/logos/nodejs.png" alt="node js logo" class="imagen_logos" >
+            <h2>Node JS: Javascript del lado del servidor</h2>
+          </article>
+          <article class="certificado centro celda_01" onmouseover="elegido(this)" onmouseout="rechazo(this)">
+            <img src="./static/img/logos/postgresql.png" alt="postgresql logo" class="imagen_logos" >
+            <h2>PostgreSQL: Base de datos SQL de gran escala.</h2>
+          </article>
+          <article class="certificado centro celda_02" onmouseover="elegido(this)" onmouseout="rechazo(this)">
+            <img src="./static/img/logos/python.png" alt="Python logo" class="imagen_logos" >
+            <h2>Python: Proyectos sencilos hasta analisis de datos.</h2>
+          </article>
+          <article class="certificado centro celda_03" onmouseover="elegido(this)" onmouseout="rechazo(this)">
+            <img src="./static/img/logos/sass.png" alt="SASS logo" class="imagen_logos" >
+              <h2>SASS / SCSS: Superset de CSS, agregando logica de programacion.</h2>
+          </article>
 
+        </section>
     </section>
+    <!-- Formación Académica -->
+    <section class="formacion seccion py-5" id="educacion">
+      <div class="contenedor">
+        <h2 class="titulo-seccion text-center mb-5">Formación Académica</h2>
+        <div class="fila g-4 justify-content-center">
+
+          <!-- Enseñanza media -->
+          <div class="columna-md-6 columna-lg-4">
+            <div class="tarjeta sombra">
+              <div class="tarjeta-cuerpo">
+                <h5 class="tarjeta-titulo">Enseñanza Media</h5>
+                <h6 class="tarjeta-subtitulo">Liceo Comercial Vate Vicente Huidobro | 2021 - 2026</h6>
+                <p class="tarjeta-texto">Especialidad de programación.</p>
+                <a href="https://liceovvh.cl/" target="_blank" class="tarjeta-enlace">Sitio oficial</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Curso YouTube: ejemplo -->
+          <div class="columna-md-6 columna-lg-4">
+            <div class="tarjeta sombra">
+              <div class="tarjeta-cuerpo">
+                <h5 class="tarjeta-titulo">Cursos de FreeCodeCamp</h5>
+                <h6 class="tarjeta-subtitulo">YouTube | 2023</h6>
+                <p class="tarjeta-texto">Curso practico de Javascript basico.</p>
+                <a href="" target="_blank" class="tarjeta-enlace">bla bla bla ble ble ble</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="columna-md-6 columna-lg-4">
+            <div class="tarjeta sombra">
+              <div class="tarjeta-cuerpo">
+                <h5 class="tarjeta-titulo">Bootcamp de HTML y CSS</h5>
+                <h6 class="tarjeta-subtitulo">YouTube | 2022</h6>
+                <p class="tarjeta-texto">Aprendizaje intensivo de maquetación web, diseño responsivo y buenas prácticas en CSS y Bootstrap.</p>
+                <a href="" target="_blank" class="tarjeta-enlace">bla bla bla ble ble ble</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- Certificaciones -->
-     <section class="certificaciones" id="certificaciones">
-      <section class="ciclo" id="ciclo">
+     <h2 class="centro titular" id="certificaciones">Mis certificados</h2>
+     <section class="certificaciones" >
+        <section class="ciclo occidental">
 
-        <article class="certificado sentry cell01">
-          <img src="./static/img/inacap-logo-png_seeklogo-181445.png" alt="Logo inacap" style="background-color: white;">
-          <h2>Alternancia Programacion, 2025</h2>
-        </article>
-        <article class="certificado sentry cell02">
-          <img src="./static/img/Data_Fundamentals_Badge.png" alt="IBM Skillbuild Data Fundamentals badge image">
-          <h2>IBM Skillbuild Data Fundamentals, 2025</h2>
-        </article>
-        <article class="certificado sentry cell03">
-          <img src="./static/img/wdf.png" alt="IBM Skillbuild Web Development Fundamentals badge image">
-            <h2>IBM Skillbuild Web Development Fundamentals, 2025</h2>
-        </article>
-        <article class="certificado sentry cell04">
-          <img src="./static/img/uedf.png" alt="IBM Skillbuild User Experience Design Fundamentals badge image">
-          <h2>IBM Skillbuild User Experience Design Fundamentals, 2025</h2>
-        </article>
+          <article class="certificado centro celda_01" onmouseover="elegido(this)" onmouseout="rechazo(this)">
+            <img src="./static/img/inacap-logo-png_seeklogo-181445.png" alt="Logo inacap" style="background-color: white;"  class="c-logos">
+            <h2>Alternancia Programacion, 2025</h2>
+          </article>
+          <article class="certificado centro celda_02" onmouseover="elegido(this)" onmouseout="rechazo(this)">
+            <img src="./static/img/Data_Fundamentals_Badge.png" alt="IBM Skillbuild Data Fundamentals badge image"  class="c-logos">
+            <h2>IBM Skillbuild Data Fundamentals, 2025</h2>
+          </article>
+          <article class="certificado centro celda_03" onmouseover="elegido(this)" onmouseout="rechazo(this)" class="c-logos">
+            <img src="./static/img/wdf.png" alt="IBM Skillbuild Web Development Fundamentals badge image" >
+              <h2>IBM Skillbuild Web Development Fundamentals, 2025</h2>
+          </article>
+          <article class="certificado centro celda_04" onmouseover="elegido(this)" onmouseout="rechazo(this)">
+            <img src="./static/img/uedf.png" alt="IBM Skillbuild User Experience Design Fundamentals badge image"  class="c-logos">
+            <h2>IBM Skillbuild User Experience Design Fundamentals, 2025</h2>
+          </article>
 
-      </section>
+        </section>
      </section>
-     <!-- Experiencias -->
-    <section class="experiencias" id="experiencias">
+    <!-- Experiencias -->
+    <section class="experiencias seccion py-5" id="experiencias">
+      <div class="contenedor">
+        <h2 class="titulo-seccion text-center mb-5">Experiencia</h2>
+        <div class="fila g-4">
 
+          <div class="columna-md-6 columna-lg-4">
+            <div class="tarjeta sombra">
+              <div class="tarjeta-cuerpo">
+                <h5 class="tarjeta-titulo">Práctica en Desarrollo Web</h5>
+                <h6 class="tarjeta-subtitulo">Empresa XYZ | 2024</h6>
+                <p class="tarjeta-texto">Participé en el desarrollo de un portal web, trabajando con HTML, CSS, Bootstrap y JavaScript, implementando interfaces responsivas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="columna-md-6 columna-lg-4">
+            <div class="tarjeta sombra">
+              <div class="tarjeta-cuerpo">
+                <h5 class="tarjeta-titulo">Proyecto Personal: Gestión de Tareas</h5>
+                <h6 class="tarjeta-subtitulo">2023-2024</h6>
+                <p class="tarjeta-texto">Desarrollé un sistema CRUD con Node.js y MongoDB para administrar tareas personales, aplicando buenas prácticas de código y control de versiones.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="columna-md-6 columna-lg-4">
+            <div class="tarjeta sombra">
+              <div class="tarjeta-cuerpo">
+                <h5 class="tarjeta-titulo">Voluntariado: Asistencia Técnica</h5>
+                <h6 class="tarjeta-subtitulo">Fundación ABC | 2022</h6>
+                <p class="tarjeta-texto">Brindé soporte técnico y enseñé conceptos básicos de informática a estudiantes, fomentando la educación tecnológica en la comunidad.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
+
     <!-- Referencias -->
-    <section class="referencias" id="referencias">
+    <section class="referencias seccion py-5" id="referencias">
+      <div class="contenedor">
+        <h2 class="titulo-seccion text-center mb-5">Referencias</h2>
+        <div class="fila g-4 justify-content-center">
 
+          <div class="columna-md-6 columna-lg-4">
+            <div class="tarjeta sombra text-center">
+              <div class="tarjeta-cuerpo">
+                <h5 class="tarjeta-titulo">Profesor Juan Pérez</h5>
+                <p class="tarjeta-texto">Docente de programación web y mentor en proyectos de desarrollo de software.</p>
+                <a href="mailto:juan.perez@email.com" class="tarjeta-enlace">juan.perez@email.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="columna-md-6 columna-lg-4">
+            <div class="tarjeta sombra text-center">
+              <div class="tarjeta-cuerpo">
+                <h5 class="tarjeta-titulo">Mentor María López</h5>
+                <p class="tarjeta-texto">Mentora de proyectos tecnológicos y responsable de guiar prácticas de desarrollo web.</p>
+                <a href="mailto:maria.lopez@email.com" class="tarjeta-enlace">maria.lopez@email.com</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
+
     <!-- Portafolio -->
-    <section class="portafolio" id="portafolio">
+    <section class="portafolio seccion py-5 bg-light" id="portafolio">
+      <div class="contenedor">
+        <h2 class="titulo-seccion text-center mb-5">Portafolio</h2>
+        <div class="fila g-4">
 
-    </section>
-    <!-- Organizaciones -->
-    <section class="organizaciones" id="organizaciones">
+          <div class="columna-md-6 columna-lg-4">
+            <div class="tarjeta sombra">
+              <div class="tarjeta-cuerpo text-center">
+                <img src="./static/img/proyecto1.png" alt="Proyecto 1" class="tarjeta-imagen mb-3">
+                <h5 class="tarjeta-titulo">Gestor de Tareas</h5>
+                <p class="tarjeta-texto">Proyecto CRUD en Node.js y MongoDB para administrar tareas.</p>
+                <a href="https://github.com/Arieltobar911/gestor-tareas" target="_blank" class="btn btn-primary">Ver en GitHub</a>
+              </div>
+            </div>
+          </div>
 
+          <div class="columna-md-6 columna-lg-4">
+            <div class="tarjeta sombra">
+              <div class="tarjeta-cuerpo text-center">
+                <img src="./static/img/proyecto2.png" alt="Proyecto 2" class="tarjeta-imagen mb-3">
+                <h5 class="tarjeta-titulo">Portafolio Personal</h5>
+                <p class="tarjeta-texto">Mi página personal con HTML, CSS y Bootstrap.</p>
+                <a href="https://github.com/Arieltobar911/portafolio" target="_blank" class="btn btn-primary">Ver en GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="columna-md-6 columna-lg-4">
+            <div class="tarjeta sombra">
+              <div class="tarjeta-cuerpo text-center">
+                <img src="./static/img/proyecto3.png" alt="Proyecto 3" class="tarjeta-imagen mb-3">
+                <h5 class="tarjeta-titulo">Juego Web</h5>
+                <p class="tarjeta-texto">Mini juego desarrollado en JavaScript y Canvas.</p>
+                <a href="https://github.com/Arieltobar911/juego-web" target="_blank" class="btn btn-primary">Ver en GitHub</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
+
     <!-- Contactos -->
-    <section class="contactos" id="contactos">
-      
-    </section>
   </main>
 
-  <!-- FOOTER / PIE -->
-  <footer class="bg-dark text-light py-4 mt-auto">
+  <!-- FOOTER / PIE y contactos -->
+  <footer class="bg-dark text-light py-4 mt-auto" id="contacto">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-      <p class="mb-2 mb-md-0">&copy; 2025 Ariel Tobar. Todos los derechos reservados.</p>
-      <div>
-        <a href="#contacto" class="text-light text-decoration-none">Contacto</a>
+      <p class="mb-2 mb-md-0">&copy;<span id="año"></span> Ariel Tobar. Todos los derechos reservados.</p>
+      <div class="container d-flex flex-column flex-md-row justify-content-end gap-3 align-items-center">
+        <a href="https://www.linkedin.com/in/ariel-eduardo-tobar-r%C3%ADos-6b5350380/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://steamcommunity.com/id/ArieltobarCL/" target="_blank"><i class="fab fa-steam fa-2x"></i></a>
+        <a href="https://www.youtube.com/@Nosequeponerxdxdxddd" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+        <a href="https://www.facebook.com/share/19hVVyUhk2/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="https://www.instagram.com/arielriostobar?igsh=MWgxdnExMnRjMXE1aA%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="https://github.com/Arieltobar911" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+        <a href="mailto:arielriostobar@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
+        <a href="tel:+56912345678"><i class="fas fa-phone fa-2x"></i></a>
       </div>
     </div>
+    <div class="bg-dark terminos">
+      <p>Esta página/CV tiene fines exclusivamente educacionales. Cualquier logotipo de marca registrada que se utilice es únicamente con fines educativos. No estoy relacionado/a con dichas empresas ni he participado en su desarrollo o actividades.</p>
+    </div>
   </footer>
-
-</body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="./static/js/main.js"></script>
+</body>
 </html>

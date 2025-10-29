@@ -3,10 +3,21 @@
 *{ 
   list-style: none;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  scroll-margin-top: 3.5rem;
+  scroll-margin-top: 5rem;
 }
 
-.sentry{
+html{
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.titular{
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin: 2rem;
+}
+
+.centro{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,12 +37,17 @@
   left: 0;
 }
 
+.navbar {
+  width: 100%;
+  overflow-x: clip; 
+}
+
 .nav-link-hov:hover::after{ opacity: 1; }
 
 /* Animaciones del dropdown nav */
-.slideIn { animation-name: slideIn;}
+.slideDentro { animation-name: slideDentro;}
 
-@keyframes slideIn {
+@keyframes slideDentro {
   0% {
     transform: translateY(1rem);
     opacity: 0;
@@ -45,35 +61,89 @@
 /* Inicio */
 
 main{
-  padding-top: 3.5rem;
+  padding-top: 2.5rem;
   min-height: 300vh;
 }
 
 .inicio{
+  background-color: black;
   width: 100%;
-  height: 600px;
-  background-color: blue;
-  display: flex;
+  min-height: 450px;
 }
 
-.my, .ps2{
+.yo, .ps2{
   width: 50%;
   height: 100%;
 }
 
-.my{ background-color: #000000; }
-.ps2{ background-color: #000000;}
+.ariel{
+  width: 600px;
+  height: 500px;
+}
+
+.marco{
+  gap: 1rem; 
+  h2{ width: 250px; color: white; text-align: center; font-size: 1.5rem; }
+  img{ width: 200px; border-radius: 50%;}
+}
+
+  /* revelaciones */
+
+.revelaciones{
+  opacity: 0;
+  overflow: hidden;
+  transition: all 1.5s ease;
+}
+
+.revelaciones.izquierdas{ transform: translateX(-200px);}
+.revelaciones.superiores{ transform: translateY(-200px);}
+.revelaciones.inferiores{ transform: translateY(200px);}
+.revelaciones.derechas{ transform: translateX(200px);}
+
+.revelaciones.izquierdas.desveladas, .revelaciones.derechas.desveladas, .revelaciones.desveladas, .revelaciones.inferiores.desveladas{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.revelaciones.superiores.desveladas{
+  opacity: 1;
+  transform: translateX(0);
+}
 
 /* Sobre mi */
 
-.sobre{
-  width: 100%;
-  height: 400px;
+:root{
+  --alto-de-seccion: 500px;
 }
 
-/* Certificado */
+.sobre{
+  width: 100%;
+  height: var(--alto-de-seccion);
+}
 
-.certificaciones{
+.caja{
+  width: 500px;
+  height: 400px;
+  color: white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0.25, 0.25) 0px 24px 25px;
+  transition: 0.3s;
+  flex-direction: column;
+  background-color: blueviolet;
+  p{width: 400px; font-size: 1.25rem; text-align: center;}
+}
+
+/* Habilidades */
+
+.imagen_logos{ width: 200px;}
+.imagen_logos.css{ width: 125px;}
+.imagen_logos.mango{ width: 300px;}
+
+/* Eduacion */
+
+/* Certificaciones */
+
+.certificaciones, .habilidades{
   position: relative;
   width: 100%;
   height: 400px;
@@ -87,24 +157,145 @@ main{
   display: flex;
   align-items: center;
   gap: 2rem;
-  animation: scroll 18s linear infinite;
+  animation: Occidente 18s linear infinite;
 }
 
-@keyframes scroll {
+.ciclo.reverso{ 
+  flex-direction: row-reverse;
+  animation-direction: reverse;
+}
+
+.habi{ animation: Occidente 50s linear infinite; } /* de habilidades */
+
+  /* animaciones de slider */
+@keyframes Occidente {
   from { transform: translateX(0%); }
   to { transform: translateX(-50.4%); }
 }
 
 .certificado{
-  width: 600px;
+  width: 500px;
   height: 300px;
   border-radius: 20px;
   flex-shrink: 0;
-  img, h2{ width: 200px; font-size: 24px; }
+  img, h2{ width: 200px; font-size: 1.5rem; }
+  gap: 2rem;
+  transition: 0.3s;
+}
+
+.celda_01{ background-color: red; }
+.celda_02{ background-color: chocolate; }
+.celda_03{ background-color: yellowgreen; }
+.celda_04{ background-color: blueviolet; }
+
+/* Terminos y Footer/Contacto *//* Terminos: intento de evitar algun problema con las empresas u organizaciones involucradas */
+
+.terminos{
+  margin-top: 1rem;
+  min-height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p{ font-size: 0.8rem; max-width: 90%;}
+}
+
+/* Estilos para: Educacion, portafolio, referencias y experiencias (por falta de tiempo se utilizo IA en estas) */
+
+:root{
+  --color-fondo-seccion: #f8f9fa;
+  --color-titulo: #212529;
+  --color-tarjeta: #ffffff;
+  --color-texto: #333333;
+  --color-boton: #0d6efd;
+}
+
+.seccion{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: var(--color-fondo-seccion);
+}
+
+.contenedor{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.titulo-seccion{
+  color: var(--color-titulo);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.fila{
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
-.cell01{ background-color: red; }
-.cell02{ background-color: chocolate; }
-.cell03{ background-color: yellowgreen; }
-.cell04{ background-color: blueviolet; }
+.columna-md-6{
+  flex: 0 0 100%;
+}
+@media(min-width: 768px){
+  .columna-md-6{ flex: 0 0 48%; }
+}
+.columna-lg-4{
+  flex: 0 0 100%;
+}
+@media(min-width: 992px){
+  .columna-lg-4{ flex: 0 0 31%; }
+}
+
+.tarjeta{
+  background-color: var(--color-tarjeta);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: rgba(0, 0, 0.25, 0.25) 0px 24px 25px;
+  height: 250px;
+}
+.tarjeta:hover{
+  transform: translateY(-5px);
+}
+
+.tarjeta-cuerpo{
+  padding: 1.5rem;
+}
+
+.tarjeta-titulo{
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color-titulo);
+}
+
+.tarjeta-subtitulo{
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.tarjeta-texto{
+  font-size: 1rem;
+  color: var(--color-texto);
+  margin-top: 0.5rem;
+}
+
+.tarjeta-imagen{
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.tarjeta-enlace,
+.btn{
+  color: #fff;
+  background-color: var(--color-boton);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.btn:hover, .tarjeta-enlace:hover{
+  background-color: darken(var(--color-boton), 10%);
+  text-decoration: none;
+}
