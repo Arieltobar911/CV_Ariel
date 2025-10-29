@@ -39,3 +39,11 @@ const flujo =  new  IntersectionObserver ((entradas) => {
 },{
   threshold: 0.1
 }); revelaciones.forEach(f => flujo.observe(f));
+
+
+// adios bloques
+
+function borrar(e){
+  const bisabuelo = e.parentElement.parentElement.parentElement;
+  bisabuelo.style.display = "none"
+}
